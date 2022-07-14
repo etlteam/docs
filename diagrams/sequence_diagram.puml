@@ -1,8 +1,8 @@
 @startuml
 participant Admin
-participant input_dag as 'Input Airflow DAG' 
+participant input_dag as "Input Airflow DAG"
 participant datalake as DataLake
-participant output_dag as 'Output Airflow DAG'
+participant output_dag as "Output Airflow DAG"
 
 Admin ->> input_dag: редактирование input-группы Airflow DAG'ов
 Admin ->> output_dag: редактирование output-группы Airflow DAG'ов
