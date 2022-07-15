@@ -28,7 +28,6 @@ else (valid records)
 				:transform data for BI;
 				:update data in DataMart;
 				stop
-				:BI dashboard;
 			endif
 		endif
 	endif
