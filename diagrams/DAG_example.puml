@@ -27,6 +27,7 @@ else (valid records)
 				:update WH;
 				:transform data for BI;
 				:update data in DataMart;
+				stop
 				:BI dashboard;
 			endif
 		endif
