@@ -3,16 +3,16 @@ start
 :xlsx;
 :save data source;
 :parse;
-#gold:validate;
+#gold:validate individual rows;
 if (separate invalid records) then (invalid records)
-	:generate report;
+	#gold:generate report;
 	:send report to manager;
 	stop
 else (valid records)
 	:update staging DB;
 	#gold:run tests with agregates;
 	if (pass tests) then (has errors)
-		:generate report;
+		#gold:generate report;
 		:send report to manager;
 		stop
 	else (no errors)
@@ -21,7 +21,7 @@ else (valid records)
 			stop
 		else (True)
 			if (wait for approval flag) then (True)
-				:send form to manager;
+				#gold:send form to manager;
 				stop
 			else (no need to approve)
 				:update WH;
