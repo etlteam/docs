@@ -33,5 +33,4 @@ else (valid records)
 		endif
 	endif
 endif
-stop
 @enduml
