@@ -20,6 +20,7 @@
 ## Проектирование уровня хранения данных, схема, партицирование
 ## Схема
 ## Базовый алгоритм и архитектура
+![](diagrams/DAG_example.svg)
 ## Масштабирование
 ## Кэширование
 ## Диаграмма вариантов использования
@@ -33,3 +34,5 @@
 ### Библиотеки
 ### Конференции
 ### Документация
+- ![airflow](https://airflow.apache.org/docs/apache-airflow/stable/index.html)
+- ![dbt](https://docs.getdbt.com/docs/introduction)
