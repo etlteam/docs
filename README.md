@@ -40,5 +40,5 @@
 ### Библиотеки
 ### Конференции
 ### Документация
-- ![airflow](https://airflow.apache.org/docs/apache-airflow/stable/index.html)
-- ![dbt](https://docs.getdbt.com/docs/introduction)
+- [airflow](https://airflow.apache.org/docs/apache-airflow/stable/index.html)
+- [dbt](https://docs.getdbt.com/docs/introduction)
