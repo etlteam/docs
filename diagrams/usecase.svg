@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="758px" preserveAspectRatio="none" style="width:453px;height:758px;background:#FFFFFF;" version="1.1" viewBox="0 0 453 758" width="453px" zoomAndPan="magnify"><defs/><g><!--MD5=[43e11ae77819885c83b5b603f8dc21c5]
+cluster ETL--><g id="cluster_ETL"><rect height="745" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;fill:none;" width="351" x="96" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="29" x="257" y="21.9951">ETL</text></g><g id="elem_UC1"><ellipse cx="271.6316" cy="66.2263" fill="#F1F1F1" rx="109.1316" ry="24.2263" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="184" x="179.6316" y="69.073">задаю правила загрузки</text></g><g id="elem_UC2"><ellipse cx="271.2578" cy="155.1516" fill="#F1F1F1" rx="138.7578" ry="30.1516" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="247" x="147.7578" y="157.9982">задаю правила выгрузки данных</text></g><g id="elem_UC3"><ellipse cx="271.3999" cy="254.78" fill="#F1F1F1" rx="159.3999" ry="34.28" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="290" x="126.3999" y="257.6267">задаю правила трансформации данны</text></g><g id="elem_UC4"><ellipse cx="271.712" cy="354.8424" fill="#F1F1F1" rx="139.712" ry="30.3424" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="249" x="147.212" y="357.6891">задаю правила проверки данных</text></g><g id="elem_UC5"><ellipse cx="271.6693" cy="442.1339" fill="#F1F1F1" rx="93.6693" ry="21.1339" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="150" x="196.6693" y="444.9805">я останавливаю ETL</text></g><g id="elem_UC6"><ellipse cx="271.6868" cy="514.9374" fill="#F1F1F1" rx="72.6868" ry="16.9374" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="218.6868" y="518.6849">запускаю ETL</text></g><g id="elem_UC7"><ellipse cx="271.6527" cy="599.9305" fill="#F1F1F1" rx="152.6527" ry="32.9305" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="276" x="133.6527" y="602.7772">я задаю расписание выполнения ETL</text></g><g id="elem_UC8"><ellipse cx="271.5234" cy="702.1047" fill="#F1F1F1" rx="156.0234" ry="33.6047" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="283" x="130.0234" y="704.9514">я получаю список существующие ETL</text></g><!--MD5=[97ab183161fd5d1db7fba7485cf76add]
+entity Admin--><g id="elem_Admin"><ellipse cx="29" cy="369.5" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M29,377.5 L29,404.5 M16,385.5 L42,385.5 M29,404.5 L16,419.5 M29,404.5 L42,419.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="46" x="6" y="433.9951">Admin</text></g><!--MD5=[ea3353ea01154d76428968f204f6b4ca]
+link Admin to UC1--><g id="link_Admin_UC1"><path d="M32.5027,360.864 C37.9332,290.156 53.2195,142.658 88,107 C107.84,86.659 135.438,75.433 163.173,69.468 " fill="none" id="Admin-UC1" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[de97aa311480b161bc35f3609e8d693b]
+link Admin to UC2--><g id="link_Admin_UC2"><path d="M30.6274,360.943 C33.4635,316.798 44.9513,244.755 88,203 C104.4617,187.033 125.566,176.209 147.543,168.91 " fill="none" id="Admin-UC2" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[48bca86a3c4accf12c9b2d9c814b033a]
+link Admin to UC3--><g id="link_Admin_UC3"><path d="M46.1219,360.658 C55.7577,342 69.7151,320.698 88,307 C105.5342,293.865 126.274,284.045 147.37,276.704 " fill="none" id="Admin-UC3" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9c5d918ecfd1c00c01cdb5a4c09a381c]
+link Admin to UC4--><g id="link_Admin_UC4"><path d="M52.1946,394.939 C77.8935,390.238 122.08,382.154 164.007,374.483 " fill="none" id="Admin-UC4" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[918702f036aedbdc0d9e7427d5dc1819]
+link Admin to UC5--><g id="link_Admin_UC5"><path d="M52.1946,402.968 C84.9869,408.831 147.882,420.077 197.771,428.996 " fill="none" id="Admin-UC5" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[deccaae9059e79e2ea27b2ea541bfb12]
+link Admin to UC6--><g id="link_Admin_UC6"><path d="M48.9229,437.14 C58.5443,452.746 71.6853,469.556 88,480 C120.877,501.047 163.446,510.017 199.2,513.624 " fill="none" id="Admin-UC6" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6555d02e07d66791191afe52409c94c7]
+link Admin to UC7--><g id="link_Admin_UC7"><path d="M34.9982,437.037 C41.4551,471.057 55.9588,519.909 88,549 C104.0755,563.595 123.992,574.054 144.701,581.54 " fill="none" id="Admin-UC7" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8e21319948118d853d0cea7b7746d788]
+link Admin to UC8--><g id="link_Admin_UC8"><path d="M34.0895,437.269 C41.5197,499.733 59.1863,619.694 88,650 C102.4147,665.161 120.907,676.0008 140.567,683.7294 " fill="none" id="Admin-UC8" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[80cc72f6379eae8e7e73c0cde695f03b]
+@startuml
+left to right direction
+actor Admin  
+rectangle ETL {
+	usecase "задаю правила загрузки" as UC1
+	usecase "задаю правила выгрузки данных" as UC2
+	usecase "задаю правила трансформации данны" as UC3
+	usecase "задаю правила проверки данных" as UC4
+	usecase "я останавливаю ETL" as UC5
+	usecase "запускаю ETL" as UC6
+	usecase "я задаю расписание выполнения ETL" as UC7
+	usecase "я получаю список существующие ETL" as UC8
+
+
+	Admin - - UC1 
+	Admin - - UC2 
+	Admin - - UC3 
+	Admin - - UC4 
+	Admin - - UC5 
+	Admin - - UC6 
+	Admin - - UC7 
+	Admin - - UC8 
+}
+@enduml
+
+PlantUML version 1.2022.7beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
