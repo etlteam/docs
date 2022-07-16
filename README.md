@@ -45,5 +45,6 @@
 ### Библиотеки
 ### Конференции
 ### Документация
-- [airflow](https://airflow.apache.org/docs/apache-airflow/stable/index.html)
+- [Airflow](https://airflow.apache.org/docs/apache-airflow/stable/index.html)
+- [Airflow RESTAPI](https://airflow.apache.org/docs/apache-airflow/stable/stable-rest-api-ref.html#section/Overview)
 - [dbt](https://docs.getdbt.com/docs/introduction)
