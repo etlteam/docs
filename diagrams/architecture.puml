@@ -3,27 +3,37 @@ actor Admin
 rectangle "Admin Panel" as AP {
 	[nginx]
 	[webserver]
-	[API]
-	database adminDB
+	[proxy API] as API
 
 	Admin -> nginx
 	nginx -> webserver
-	webserver -> adminDB
 	webserver --> API
 }
+
+rectangle "Automation platform (Zapier)" {
+	[trigger]
+	[action]
+	trigger -> action
+}
+
+Admin -> trigger
+
+action -> API
+
 rectangle ETL {
 	folder "Airflow DAGs" as dag
-	[ETL API] as airflow
-	API --> [ETL API]
+	[Airflow API] as airflow
+	API --> airflow
 
 
 	database DataLake
 	database DWH
+	database "DWH replica" as replica
 
-	airflow -> DWH
-	airflow -> DataLake
+	airflow -> dag
 
 	dag --> DataLake
 	dag --> DWH
+	DWH --> replica
 }
 @enduml
