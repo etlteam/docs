@@ -1,0 +1,29 @@
+@startuml
+actor Admin
+rectangle "Admin Panel" as AP {
+	[nginx]
+	[webserver]
+	[API]
+	database adminDB
+
+	Admin -> nginx
+	nginx -> webserver
+	webserver -> adminDB
+	webserver --> API
+}
+rectangle ETL {
+	folder "Airflow DAGs" as dag
+	[ETL API] as airflow
+	API --> [ETL API]
+
+
+	database DataLake
+	database DWH
+
+	airflow -> DWH
+	airflow -> DataLake
+
+	dag --> DataLake
+	dag --> DWH
+}
+@enduml
