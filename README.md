@@ -29,6 +29,7 @@
 ![пример потока данных](diagrams/DAG_example.svg)
 
 *архитектура*
+
 ![архитектура](diagrams/architecture.svg)
 
 ## Масштабирование
