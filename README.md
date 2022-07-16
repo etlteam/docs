@@ -46,5 +46,5 @@
 ### Конференции
 ### Документация
 - [Airflow](https://airflow.apache.org/docs/apache-airflow/stable/index.html)
-- [Airflow RESTAPI](https://airflow.apache.org/docs/apache-airflow/stable/stable-rest-api-ref.html#section/Overview)
+- [Airflow REST API](https://airflow.apache.org/docs/apache-airflow/stable/stable-rest-api-ref.html#section/Overview)
 - [dbt](https://docs.getdbt.com/docs/introduction)
