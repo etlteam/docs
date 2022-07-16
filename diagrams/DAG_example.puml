@@ -3,16 +3,16 @@ start
 :xlsx;
 :save data source;
 :parse;
-:validate;
+#gold:validate individual rows;
 if (separate invalid records) then (invalid records)
-	:generate report;
+	#gold:generate report;
 	:send report to manager;
 	stop
 else (valid records)
 	:update staging DB;
-	:run tests with agregates;
+	#gold:run tests with agregates;
 	if (pass tests) then (has errors)
-		:generate report;
+		#gold:generate report;
 		:send report to manager;
 		stop
 	else (no errors)
@@ -21,16 +21,15 @@ else (valid records)
 			stop
 		else (True)
 			if (wait for approval flag) then (True)
-				:send form to manager;
+				#gold:send form to manager;
 				stop
 			else (no need to approve)
 				:update WH;
 				:transform data for BI;
 				:update data in DataMart;
-				:BI dashboard;
+				stop
 			endif
 		endif
 	endif
 endif
-stop
 @enduml

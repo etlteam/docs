@@ -1,11 +1,11 @@
 @startuml
 participant Admin
 participant input_dag as "Input Airflow DAG"
-participant datalake as DataLake
+participant DataLake
 participant output_dag as "Output Airflow DAG"
 
 Admin ->> input_dag: редактирование input-группы Airflow DAG'ов
 Admin ->> output_dag: редактирование output-группы Airflow DAG'ов
-input_dag ->> datalake:  отправка данных в БД
-datalake ->> output_dag: получение данных из БД в output DAG
+input_dag ->> DataLake:  отправка данных в БД
+DataLake ->> output_dag: получение данных из БД в output DAG
 @enduml
