@@ -1,39 +1,56 @@
 @startuml
 actor Admin
-rectangle "Admin Panel" as AP {
-	[nginx]
-	[webserver]
-	[proxy API] as API
 
-	Admin -> nginx
-	nginx -> webserver
-	webserver --> API
+rectangle ERP {
+	database ERP_prod
+	database ERP_replica
+	ERP_prod -> ERP_replica
 }
+
+rectangle "Сервис централизованной аналитики"  {
+
+	rectangle "Admin Panel" as AP {
+		[nginx]
+		[webserver]
+		[proxy API] as API
+
+		Admin -> nginx
+		nginx -> webserver
+		webserver --> API
+	}
+
+	rectangle "оркестратор задач (Airflow)" as ETL {
+		folder "Airflow DAGs" as dag {
+			file InputDAG
+			file OutputDAG
+		}
+		[Airflow API] as airflow
+		API --> airflow
+
+
+		database DataLake
+		database DWH
+		database DWH_replica
+
+		ERP_replica -> InputDAG
+		InputDAG -> DataLake
+		DataLake -> DWH
+
+		DWH --> DWH_replica
+		DWH_replica -> OutputDAG
+		OutputDAG -> ERP_prod
+	}
+}
+
+
 
 rectangle "Automation platform (Zapier)" {
 	[trigger]
 	[action]
 	trigger -> action
 }
-
 Admin -> trigger
-
 action -> API
 
-rectangle ETL {
-	folder "Airflow DAGs" as dag
-	[Airflow API] as airflow
-	API --> airflow
 
-
-	database DataLake
-	database DWH
-	database "DWH replica" as replica
-
-	airflow -> dag
-
-	dag --> DataLake
-	dag --> DWH
-	DWH --> replica
-}
 @enduml
