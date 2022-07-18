@@ -4,7 +4,7 @@ actor Admin
 rectangle ERP {
 	database ERP_prod
 	database ERP_replica
-	ERP_prod -> ERP_replica
+	ERP_prod --> ERP_replica
 }
 
 rectangle "Сервис централизованной аналитики"  {
@@ -14,8 +14,8 @@ rectangle "Сервис централизованной аналитики"  {
 		[webserver]
 		[proxy API] as API
 
-		Admin -> nginx
-		nginx -> webserver
+		Admin --> nginx
+		nginx --> webserver
 		webserver --> API
 	}
 
@@ -26,19 +26,20 @@ rectangle "Сервис централизованной аналитики"  {
 		}
 		[Airflow API] as airflow
 		API --> airflow
+                airflow --> dag
 
 
 		database DataLake
 		database DWH
 		database DWH_replica
 
-		ERP_replica -> InputDAG
-		InputDAG -> DataLake
-		DataLake -> DWH
+		ERP_replica --> InputDAG
+		InputDAG --> DataLake
+		DataLake --> DWH
 
 		DWH --> DWH_replica
-		DWH_replica -> OutputDAG
-		OutputDAG -> ERP_prod
+		DWH_replica --> OutputDAG
+		OutputDAG --> ERP_prod
 	}
 }
 
@@ -47,10 +48,10 @@ rectangle "Сервис централизованной аналитики"  {
 rectangle "Automation platform (Zapier)" {
 	[trigger]
 	[action]
-	trigger -> action
+	trigger --> action
 }
-Admin -> trigger
-action -> API
+Admin --> trigger
+action --> API
 
 
 @enduml
