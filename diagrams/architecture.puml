@@ -1,15 +1,15 @@
 @startuml
-actor Admin
+!include <C4/C4_Container>
+Person(Admin, "Admin", )
 
-rectangle ERP {
+System_Ext(ERP, "ERP",) {
 	database ERP_prod
 	database ERP_replica
 	ERP_prod --> ERP_replica
 }
 
-rectangle "Сервис централизованной аналитики"  {
-
-	rectangle "Admin Panel" as AP {
+System_Boundary(c1,"Сервис централизованной аналитики" ) {
+	Container(AP,"Admin Panel") {
 		[nginx]
 		[webserver]
 		[proxy API] as API
@@ -19,19 +19,19 @@ rectangle "Сервис централизованной аналитики"  {
 		webserver --> API
 	}
 
-	rectangle "оркестратор задач (Airflow)" as ETL {
+	Container(ETL, "оркестратор задач", "Airflow" ) {
 		folder "Airflow DAGs" as dag {
 			file InputDAG
 			file OutputDAG
 		}
 		[Airflow API] as airflow
+	}
 		API --> airflow
                 airflow --> dag
 
-
-		database DataLake
-		database DWH
-		database DWH_replica
+		ContainerDb(DataLake, "DataLake")
+		ContainerDb(DWH, "DWH")
+		ContainerDb(DWH_replica, "DWH_replica")
 
 		ERP_replica --> InputDAG
 		InputDAG --> DataLake
@@ -40,18 +40,13 @@ rectangle "Сервис централизованной аналитики"  {
 		DWH --> DWH_replica
 		DWH_replica --> OutputDAG
 		OutputDAG --> ERP_prod
-	}
 }
 
-
-
-rectangle "Automation platform (Zapier)" {
+System_Ext(Automation,"Automation platform","(Zapier)") {
 	[trigger]
 	[action]
 	trigger --> action
 }
 Admin --> trigger
 action --> API
-
-
 @enduml
