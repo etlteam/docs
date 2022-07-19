@@ -47,4 +47,5 @@
 ### Документация
 - [Airflow](https://airflow.apache.org/docs/apache-airflow/stable/index.html)
 - [Airflow REST API](https://airflow.apache.org/docs/apache-airflow/stable/stable-rest-api-ref.html#section/Overview)
+- [dag-factory](https://github.com/ajbosco/dag-factory)
 - [dbt](https://docs.getdbt.com/docs/introduction)
